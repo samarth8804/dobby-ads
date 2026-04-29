@@ -8,6 +8,11 @@ const folderSchema = new mongoose.Schema(
       trim: true,
     },
 
+    size: {
+      type: Number,
+      default: 0,
+    },
+
     parentId: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Folder",
