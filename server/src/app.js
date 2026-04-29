@@ -3,6 +3,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRoutes from "./routes/auth.route.js";
 import folderRoutes from "./routes/folder.route.js";
+import imageRoutes from "./routes/image.route.js";
 
 const app = express();
 
@@ -22,5 +23,6 @@ app.get("/", (req, res) => {
 
 app.use("/api/auth", authRoutes);
 app.use("/api/folder", folderRoutes);
+app.use("/api/image", imageRoutes);
 
 export default app;
