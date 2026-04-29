@@ -57,4 +57,3 @@ export const getFolderContents = async (req, res) => {
     });
   }
 };
-
