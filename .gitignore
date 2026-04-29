@@ -1,0 +1,25 @@
+# dependencies
+node_modules/
+
+# env files
+.env
+client/.env
+server/.env
+
+# logs
+logs
+*.log
+
+# build folders
+dist/
+build/
+client/dist/
+
+# OS files
+.DS_Store
+
+# uploads (local testing only)
+uploads/
+
+# IDE
+.vscode/
