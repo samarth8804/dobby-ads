@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
 import User from "../models/User.model.js";
+import Folder from "../models/Folder.model.js";
 import {
   generateAccessToken,
   generateRefreshToken,
@@ -21,6 +22,12 @@ export const signup = async (req, res) => {
       username,
       email,
       password,
+    });
+
+    await Folder.create({
+      name: "root",
+      parentId: null,
+      userId: user._id,
     });
 
     const accessToken = generateAccessToken(user._id);
