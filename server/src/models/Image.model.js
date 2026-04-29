@@ -13,6 +13,11 @@ const imageSchema = new mongoose.Schema(
       required: true,
     },
 
+    publicId: {
+      type: String,
+      required: true,
+    },
+
     size: {
       type: Number, // in bytes
       required: true,
