@@ -1,5 +1,5 @@
 import axios from "axios";
-import store from "../redux/store";
+import { store } from "../redux/store";
 import { setAccessToken, clearAuth } from "../redux/slices/authSlice";
 import * as authApi from "./auth.api";
 
