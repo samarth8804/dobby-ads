@@ -44,6 +44,19 @@ export const createFolder = async (req, res) => {
 
     const finalParentId = parentId || root._id;
 
+    // check if parent folder exists or not
+
+    const parentFolder = await Folder.findOne({
+      _id: finalParentId,
+      userId: req.user.id,
+    });
+
+    if (!parentFolder) {
+      return res.status(404).json({
+        message: "Folder doesn't exist",
+      });
+    }
+
     // Check duplicate folder in same directory
     const existing = await Folder.findOne({
       name,
