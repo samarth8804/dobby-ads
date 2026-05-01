@@ -1,6 +1,6 @@
 import axiosInstance from "./axios";
 
-const FOLDERS_BASE = "/folders";
+const FOLDERS_BASE = "/folder";
 
 // Get folders (with optional parentId filter) - returns folder data with size
 export const getFolders = (parentId = null) => {
