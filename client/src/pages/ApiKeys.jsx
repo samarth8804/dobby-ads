@@ -276,7 +276,7 @@ const ApiKeys = () => {
       "args": [
         "-y",
         "mcp-remote",
-        "https://localhost:3000/mcp",
+        "https://dobby-ads-server-4hj2.onrender.com/mcp",
         "--transport",
         "http-only",
         "--header",
