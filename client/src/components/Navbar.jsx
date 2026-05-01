@@ -42,13 +42,22 @@ const Navbar = () => {
             </Link>
           </div>
         ) : (
-          <button
-            onClick={handleLogout}
-            className="flex items-center gap-2 rounded-lg bg-linear-to-r from-amber-700 to-amber-900 px-4 py-2 text-xs font-medium text-white transition-all hover:shadow-lg hover:shadow-amber-700/30 sm:px-6 sm:text-sm"
-          >
-            <FiLogOut className="text-sm sm:text-base" />
-            <span>Logout</span>
-          </button>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Link
+              to="/keys"
+              className="rounded-lg border border-amber-200 bg-white px-3 py-2 text-xs font-medium text-amber-900 transition-colors hover:bg-amber-50 sm:px-4 sm:text-sm"
+            >
+              API Keys
+            </Link>
+
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-2 rounded-lg bg-linear-to-r from-amber-700 to-amber-900 px-4 py-2 text-xs font-medium text-white transition-all hover:shadow-lg hover:shadow-amber-700/30 sm:px-6 sm:text-sm"
+            >
+              <FiLogOut className="text-sm sm:text-base" />
+              <span>Logout</span>
+            </button>
+          </div>
         )}
       </div>
     </header>
