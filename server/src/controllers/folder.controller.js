@@ -108,7 +108,13 @@ export const getFolderData = async (req, res) => {
       userId,
     }).sort({ createdAt: -1 });
 
+    const currentFolder = await Folder.findOne({
+      _id: parentId,
+      userId,
+    });
+
     res.json({
+      currentFolder,
       folders,
       images,
     });
