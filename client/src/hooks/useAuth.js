@@ -8,7 +8,7 @@ import {
 } from "../redux/slices/authSlice";
 import * as authApi from "../api/auth.api";
 
-export const useAuth = () => {
+const useAuth = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -69,3 +69,5 @@ export const useAuth = () => {
     isAuthenticated: !!accessToken,
   };
 };
+
+export default useAuth;
