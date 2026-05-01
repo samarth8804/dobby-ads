@@ -4,6 +4,7 @@ import {
   login,
   refreshToken,
   logout,
+  me,
 } from "../controllers/auth.controller.js";
 import {
   signupValidator,
@@ -19,8 +20,6 @@ router.post("/signup", signupValidator, validate, signup);
 router.post("/login", loginValidator, validate, login);
 router.post("/refresh", refreshToken);
 router.post("/logout", protect, logout);
-router.get("/me", protect, (req, res) => {
-  res.json({ user: req.user });
-});
+router.get("/me", protect, me);
 
 export default router;
